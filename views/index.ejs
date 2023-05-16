@@ -1,0 +1,86 @@
+<%- include('partials/header.ejs') -%>
+
+    <!-- PRE-MAIN -->
+
+    <header>
+        <section id="banner-wrapper">
+            <div id="banner" class="container">
+                <div id="logo"><img src="images/logo-expanded.svg" alt="lee santos logo" /></div>
+                <div id="accessibility-wrapper">
+                    <div class="accessibility-items placeholder-wave no-select" aria-hidden="true">
+                        <span class="placeholder"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="bottom"
+                            data-bs-title="Theme toggle coming soon.">Theme btn.</span>
+                        <span class="placeholder"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="bottom"
+                            data-bs-title="Search function coming soon.">This is a placeholder.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="breadcrumb-wrapper">
+            <nav class="container" aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Resume</li>
+                </ul>
+            </nav>
+        </section>
+
+        <div id="banner-divider" class="gradient-background"></div>
+    </header>
+
+    <!-- MAIN -->
+
+    <main class="container">
+        <nav id="navbar">
+            <div id="navbar-content">
+                <ul id="scrollspy-target">
+                    <li><a href="#about-me">about me</a></li>
+                    <li><a href="#education">education</a></li>
+                    <ul>
+                        <li>lighthouse labs</li>
+                        <li >western university</li>
+                    </ul>
+                    <li><a href="#">employment</a></li>
+                    <ul>
+                        <li>freelance</li>
+                        <li>four seasons</li>
+                        <li>stateland</li>
+                    </ul>
+                    <li><a href="#">skills</a></li>
+                    <ul>
+                        <li><a href="#">data wrangling</a></li>
+                        <li><a href="#">data visualization</a></li>
+                        <li><a href="#">programming</a></li>
+                        <li><a href="#">machine learning</a></li>
+                        <li><a href="#">tools & platforms</a></li>
+                        <li><a href="#">big data</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </nav>
+
+        <article id="main" class="container"
+            data-bs-spy="scroll"
+            data-bs-target="#scrollspy-target"
+            data-bs-offset="0"
+            data-bs-smooth-scroll="true"
+            tabindex="0">
+
+            <h2 id="about-me">About me</h2>
+            <p>Specialization in data science with 8+ years of experience in fast-paced, high-stress construction environments as part of interdisciplinary project management teams. Pursuing a professional career in data science to find solutions to inefficiencies in management systems that are common in industries that are slow to adopt new technologies.</p><br />
+            <p>As an unrepentant hobbyist, machine learning provides tools that can either improve upon existing projects or open opportunities for new ones.</p>
+
+            <h2 id="education">Education</h2>
+        </article>
+
+        <div id="quick-links" class="container">
+            <h5>Quick links</h5>
+        </div>
+    </main>
+
+<%- include('partials/footer.ejs') -%>
