@@ -5,6 +5,10 @@ body {
     line-height: 2;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
 h2 {
     line-height: 3;
     scroll-margin-top: 8rem;
@@ -30,7 +34,7 @@ p {
 
 
 
-/*** HEADER ***/
+/***** HEADER *****/
 header {
     position: sticky;
     top: 0;
@@ -98,21 +102,22 @@ header {
 
 
 
-/*** MAIN ***/
+/***** MAIN *****/
 main.container {
     display: flex;
     flex-flow: row nowrap;
     padding: 0 3rem;
 }
 
-    /* NAVIGATION */
+    /*** NAVIGATION ***/
     #navbar {
         display: flex;
-        flex-flow: column;
+        flex-flow: column nowrap;
         flex-basis: 40rem;
 
+        font-weight: 300;
         padding-top: 3rem;
-        max-height: 50vh;
+        max-height: 70vh;
         overflow-y: scroll;
         
         mask-image: linear-gradient(
@@ -120,6 +125,10 @@ main.container {
             transparent 0,
             #000 3rem calc(100% - 3rem),
             transparent);
+    }
+
+    #navbar a:hover {
+        color: #00BFFF;
     }
 
     #navbar-content li {
@@ -134,7 +143,11 @@ main.container {
         font-size: .75rem;
     }
 
-    /* MAIN CONTENT */
+    .navbar-spacer {
+        height: 3rem;
+    }
+
+    /*** MAIN CONTENT ***/
     #main {
         margin: 0 3rem;
     }
@@ -143,21 +156,83 @@ main.container {
         font-size: .80rem;
     }
 
-    /* SIDE BAR */
-
-    #quick-links {
-        flex-basis: 40rem;
+    .article-container {
+        position: relative;
+        margin-bottom: 3rem;
+        left: 10%;
     }
 
-    #quick-links h5 {
-        font-size: 1.2rem;
+    #main table, #main p {
+        position: relative;
+        font-size: .75rem;
+        width: 120%;
+        right: 10%;
+    }
+
+    #main tr:hover {
+        background-color: antiquewhite;
+        padding-left: 1rem;
+    }
+
+    #main th {
+        border-bottom: 1px solid #4E4E4E;
+        padding: .5rem;
+    }
+
+    #main th:nth-child(3),
+    #main td:nth-child(3),
+    #main th:nth-child(4),
+    #main td:nth-child(4)
+    {
+        text-align: end;
+    }
+
+    #main td {
+        border-bottom: 1px dotted #4E4E4E;
+        font-weight: 300;
+        padding: .5rem;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    }
+
+    /** SIDE BAR **/
+    #quick-links {
+        display: flex;
+        flex-flow: column nowrap;
+        flex-basis: 40rem;
+
         font-weight: 300;
         letter-spacing: .2rem;
+        padding-right: 0;
+        text-align: right;
     }
 
+    #quick-links a:hover {
+        color: #ED1C24;
+    }
+
+    #quick-links td {
+        padding: .5rem 0;
+    }
+
+    #quick-links th {
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+        vertical-align: middle;
+    }
+
+    #quick-links td {
+        font-size: .75rem;
+        border-right: 1px solid #2E3192;
+        padding-right: 1rem;
+    }
+    
 
 
-/*** FOOTER ***/
+/***** FOOTER *****/
 #footer {
     position: relative;
     height: 30vh;
