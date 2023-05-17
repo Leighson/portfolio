@@ -41,39 +41,40 @@
 
         <nav id="navbar">
             <div id="navbar-content">
-                <ul id="scrollspy-target">
+                <ul>
                     <li><a href="#about-me">about me</a></li>
                     <li><a href="#education">education</a></li>
                     <ul>
-                        <li>udemy</li>
-                        <li>lighthouse labs</li>
-                        <li >western university</li>
+                        <li><a href="#education">web development</a></li>
+                        <li><a href="#education">data science</a></li>
+                        <li><a href="#education">civil engineering</a></li>
                     </ul>
-                    <li><a href="#">employment</a></li>
+                    <li><a href="#employment">employment</a></li>
                     <ul>
-                        <li>freelance</li>
-                        <li>four seasons</li>
-                        <li>stateland</li>
+                        <li><a href="#employment">data analysis</a></li>
+                        <li><a href="#employment">project coordinator</a></li>
+                        <li><a href="#employment">cadet engineer</a></li>
                     </ul>
-                    <li><a href="#">skills</a></li>
+                    <li><a href="#skills">skills</a></li>
                     <ul>
-                        <li><a href="#">data wrangling</a></li>
-                        <li><a href="#">data visualization</a></li>
-                        <li><a href="#">programming</a></li>
-                        <li><a href="#">machine learning</a></li>
-                        <li><a href="#">tools & platforms</a></li>
-                        <li><a href="#">big data</a></li>
+                        <li><a href="#skills">data wrangling</a></li>
+                        <li><a href="#skills">data visualization</a></li>
+                        <li><a href="#skills">programming</a></li>
+                        <li><a href="#skills">machine learning</a></li>
+                        <li><a href="#skills">tools & platforms</a></li>
+                        <li><a href="#skills">big data</a></li>
                     </ul>
                 </ul>
                 <div class="navbar-spacer"></div>
             </div>
         </nav>
+        
 
         <!-- MAIN CONTENT -->
 
         <article id="main" class="container"
             data-bs-spy="scroll"
-            data-bs-target="#scrollspy-target"
+            data-bs-target="#navbar"
             data-bs-offset="0"
             data-bs-smooth-scroll="true"
             tabindex="0">
@@ -117,28 +118,63 @@
                 <table id="employment-table">
                     <tbody>
                         <tr>
-                            <th>Position</th>
-                            <th>Company</th>
-                            <th>Start</th>
-                            <th>End</th>
+                            <th class="position">Position</th>
+                            <th class="company">Company</th>
+                            <th class="start">Start</th>
+                            <th class="end">End</th>
                         </tr>
                         <tr>
-                            <td>Data Scientist/Analyst</td>
-                            <td>Freelance</td>
-                            <td>October 2022</td>
-                            <td>Present</td>
+                            <td><a href="#collapse-item1" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item1">Data Analyst</a></td>
+                            <td><a href="#collapse-item1" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item1">Freelance</a></td>
+                            <td><a href="#collapse-item1" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item1">October 2022</a></td>
+                            <td><a href="#collapse-item1" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item1">Present</a></td>
                         </tr>
                         <tr>
-                            <td>Project Coordinator</td>
-                            <td>Four Seasons Site Development</td>
-                            <td>March 2014</td>
-                            <td>October 2022</td>
+                            <td class="collapsed-row" colspan="4">
+                                <div class="collapse" id="collapse-item1">
+                                    <ul>
+                                        <li>Working with clients to retrieve and manipulate data accumulated over the last decade.</li>
+                                        <li>Using the Data Science life cycle as our guidepost, we perform discoveries in the context of their business goals to uncover actionable insights.</li>
+                                        <li>Prefer direct communication with the COO to develop hypotheses and outline the investigation.</li>
+                                    </ul>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td>Cadet Engineer</td>
-                            <td>Stateland</td>
-                            <td>September 2012</td>
-                            <td>April 2013</td>
+                            <td><a href="#collapse-item2" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item2">Project Coordinator</a></td>
+                            <td><a href="#collapse-item2" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item2">Four Seasons Site Development</a></td>
+                            <td><a href="#collapse-item2" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item2">March 2014</a></td>
+                            <td><a href="#collapse-item2" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item2">October 2022</a></td>
+                        </tr>
+                        <tr>
+                            <td class="collapsed-row" colspan="4">
+                                <div class="collapse" id="collapse-item2">
+                                    <ul>
+                                        <li>Implemented and enforced production-specific safety programs and maintained clean safety records year-on-year in concert with clients, consultants, subcontractors, and company health & safety management personnel; challenging safety conditions include 30-m depth excavations and micro-tunneling underneath a provincial highway.</li>
+                                        <li>Developed skill sets to meet challenging deadlines and negotiate unforeseen complications in the pre-construction and exploratory phases of most projects such that client needs were still met with minimal loss to time and budget.</li>
+                                        <li>Created technical specification documents for clients to satisfy contract requirements when closing projects.</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="#collapse-item3" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item3">Cadet Engineer</a></td>
+                            <td><a href="#collapse-item3" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item3">Stateland</a></td>
+                            <td><a href="#collapse-item3" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item3">September 2012</a></td>
+                            <td><a href="#collapse-item3" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-item3">April 2013</a></td>
+                        </tr>
+                        <tr>
+                            <td class="collapsed-row" colspan="4">
+                                <div class="collapse" id="collapse-item3">
+                                    <ul>
+                                        <li>Assessed BoM for semi-detached housing to spot deviations from historical data and/or implement changes according to design revisions to inform future design decisions relating to subdivision developments and other low-cost residential projects.</li>
+                                        <li>Provided material take-offs to develop construction schedules and plans for material procurement.</li>
+                                        <li>Consulted with vendors to closely monitor their efforts (and re-establish deadlines as necessary) and to conduct trade buy-ins for masonry works, steel framing, and for various architectural elements such as windows and doors.</li>
+                                        <li>Facilitated meetings between senior engineers and vendors to negotiate costs, determine product specifications, and maintain collaborative relationships between all parties.</li>
+                                        <li>Created and modified existing templates to automate routine assignments, which doubled work efficiency as well as enhanced accuracy and consistency by removing sources of human error.</li>
+                                    </ul>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

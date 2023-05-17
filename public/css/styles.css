@@ -115,10 +115,12 @@ main.container {
         flex-flow: column nowrap;
         flex-basis: 40rem;
 
+        position: sticky;
         font-weight: 300;
         padding-top: 3rem;
-        max-height: 70vh;
+        max-height: 50vh;
         overflow-y: scroll;
+        top: 9rem;
         
         mask-image: linear-gradient(
             180deg,
@@ -165,18 +167,36 @@ main.container {
     #main table, #main p {
         position: relative;
         font-size: .75rem;
-        width: 120%;
-        right: 10%;
+        width: 130%;
+        right: 15%;
     }
 
     #main tr:hover {
-        background-color: antiquewhite;
-        padding-left: 1rem;
+        background-color: #E2E2E2;
+    }
+
+    #main tr ul {
+        margin-bottom: 0;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
     }
 
     #main th {
         border-bottom: 1px solid #4E4E4E;
         padding: .5rem;
+    }
+
+    #main th.position {
+        width: 25%;
+    }
+
+    #main th.company {
+        width: 35%;
+    }
+
+    #main th.start,
+    #main th.end {
+        width: 22.5%;
     }
 
     #main th:nth-child(3),
@@ -188,10 +208,24 @@ main.container {
     }
 
     #main td {
-        border-bottom: 1px dotted #4E4E4E;
+        border-top: 1px dotted #4E4E4E;
         font-weight: 300;
         padding: .5rem;
     }
+
+    #main .collapsed-row {
+        border-top: 0;
+        padding: 0;
+    }
+
+    #main .collapsed-row li {
+        font-size: .7rem;
+        list-style: circle outside;
+    }
+
+    /* #main .table-container {
+        padding: .5rem;
+    } */
 
     .skills-grid {
         display: grid;
