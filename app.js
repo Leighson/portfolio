@@ -8,11 +8,11 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+    res.redirect('/resume');
 });
 
 app.get('/resume', (req, res) => {
-    res.render('index.ejs');
+    res.render('resume.ejs');
 });
 
 app.get('/portfolio', (req, res) => {
