@@ -11,6 +11,18 @@ app.get('/', (req, res) => {
     res.render('index.ejs');
 });
 
+app.get('/resume', (req, res) => {
+    res.render('index.ejs');
+});
+
+app.get('/portfolio', (req, res) => {
+    res.render('placeholder.ejs');
+});
+
+app.get('/blog', (req, res) => {
+    res.render('placeholder.ejs');
+});
+
 
 app.listen(PORT, () => {
     console.log(`Server started on Port ${PORT}...`);

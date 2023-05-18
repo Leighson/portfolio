@@ -1,40 +1,5 @@
 <%- include('partials/header.ejs') -%>
 
-    <!-- PRE-MAIN -->
-
-    <header>
-        <section id="banner-wrapper">
-            <div id="banner" class="container">
-                <div id="logo"><img src="images/logo-expanded.svg" alt="lee santos logo" /></div>
-                <div id="accessibility-wrapper">
-                    <div class="accessibility-items placeholder-wave no-select" aria-hidden="true">
-                        <span class="placeholder"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="bottom"
-                            data-bs-title="Theme toggle coming soon.">Theme btn.</span>
-                        <span class="placeholder"
-                            data-bs-toggle="tooltip"
-                            data-bs-placement="bottom"
-                            data-bs-title="Search function coming soon.">This is a placeholder.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="breadcrumb-wrapper">
-            <nav class="container" aria-label="breadcrumb">
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Resume</li>
-                </ul>
-            </nav>
-        </section>
-
-        <div id="banner-divider" class="gradient-background"></div>
-    </header>
-
-    <!-- MAIN -->
-
     <main class="container">
 
         <!-- NAVIGATION -->
@@ -68,7 +33,6 @@
                 <div class="navbar-spacer"></div>
             </div>
         </nav>
-        
 
         <!-- MAIN CONTENT -->
 
@@ -79,7 +43,7 @@
             data-bs-smooth-scroll="true"
             tabindex="0">
 
-            <div  id="about-me" class="article-container">
+            <div id="about-me" class="article-container">
                 <h2>About me</h2>
                 <p>Specialization in data science with 8+ years of experience in fast-paced, high-stress construction environments as part of interdisciplinary project management teams. Pursuing a professional career in data science to find solutions to inefficiencies in management systems that are common in industries that are slow to adopt new technologies.</p><br />
                 <p>As an unrepentant hobbyist, machine learning provides tools that can either improve upon existing projects or open opportunities for new ones.</p>
@@ -90,9 +54,9 @@
                 <table id="education-table">
                     <tbody>
                         <tr>
-                            <th>Education</th>
-                            <th>Institution</th>
-                            <th>Graduation</th>
+                            <th class="education">Education</th>
+                            <th class="institution">Institution</th>
+                            <th class="graduation">Graduation</th>
                         </tr>
                         <tr>
                             <td>Web Development, Certification</td>
@@ -183,26 +147,74 @@
             <div id="skills" class="article-container">
                 <h2>Skills</h2>
                 <div class="skills-grid">
+                    <div class="big-data">
+                        <h6>Big Data</h6>
+                        <ul>
+                            <li>apache spark</li>
+                            <li>pyspark</li>
+                        </ul>
+                    </div>
                     <div class="data-wrangling">
-
+                        <h6>Data Wrangling</h6>
+                        <ul>
+                            <li>numpy</li>
+                            <li>pandas</li>
+                            <li>statsmodels</li>
+                            <li>scipy</li>
+                        </ul>
                     </div>
                     <div class="data-visualization">
-
+                        <h6>Data Visualization</h6>
+                        <ul>
+                            <li>matplotlib</li>
+                            <li>seaborn</li>
+                            <li>plotly</li>
+                        </ul>
                     </div>
                     <div class="programming">
-
+                        <h6>Programming</h6>
+                        <ul>
+                            <li>python</li>
+                            <li>SQL</li>
+                            <li>javascript</li>
+                        </ul>
                     </div>
                     <div class="machine-learning">
-
+                        <h6>Machine Learning</h6>
+                        <ul>
+                            <li>scikit-learn</li>
+                            <li>keras</li>
+                            <li>NLTK</li>
+                            <li>gensim</li>
+                            <li>OpenCV</li>
+                            <li>SVM</li>
+                        </ul>
                     </div>
                     <div class="tools-platform">
-
+                        <h6>Tools & Platforms</h6>
+                        <ul>
+                            <li>AWS</li>
+                            <li>jupyter</li>
+                            <li>VSCode</li>
+                            <li>github</li>
+                            <li>tmux</li>
+                            <li>flask</li>
+                            <li>Docker</li>
+                            <li>ffmpeg</li>
+                        </ul>
                     </div>
-                    <div class="big-data">
-
+                    <div class="web-development">
+                        <h6>Web Development</h6>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Node.js</li>
+                            <li>figma</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            
 
         </article>
 
@@ -219,6 +231,9 @@
                     </tr>
                     <tr>
                         <td><a href="/portfolio">portfolio</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="/blog">blog</a></td>
                     </tr>
                 </tbody>
             </table>

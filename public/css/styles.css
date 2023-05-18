@@ -32,6 +32,34 @@ p {
     padding: 3rem;
 }
 
+.under-construction {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+
+    height: 60vh;
+    text-align: center;
+}
+
+
+/***** CALENDLY *****/
+.calendly-badge-widget .calendly-badge-content {
+    font-family: 'Inter', sans-serif;
+    font-size: .8rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    padding: 1rem;
+    transition: background-color .25s;
+    -webkit-transition: background-color .25s;
+    -moz-transition: background-color .25s;
+    -ms-transition: background-color .25s;
+    -o-transition: background-color .25s;
+}
+
+.calendly-badge-widget .calendly-badge-content:hover {
+    background-color: #ED1C24 !important;
+}
 
 
 /***** HEADER *****/
@@ -113,12 +141,12 @@ main.container {
     #navbar {
         display: flex;
         flex-flow: column nowrap;
-        flex-basis: 40rem;
+        flex-basis: 25rem;
 
         position: sticky;
         font-weight: 300;
         padding-top: 3rem;
-        max-height: 50vh;
+        max-height: 60vh;
         overflow-y: scroll;
         top: 9rem;
         
@@ -153,7 +181,6 @@ main.container {
     #main {
         margin: 0 3rem;
     }
-
     #main p {
         font-size: .80rem;
     }
@@ -161,14 +188,12 @@ main.container {
     .article-container {
         position: relative;
         margin-bottom: 3rem;
-        left: 10%;
     }
 
     #main table, #main p {
         position: relative;
         font-size: .75rem;
-        width: 130%;
-        right: 15%;
+        width: 100%;
     }
 
     #main tr:hover {
@@ -186,6 +211,18 @@ main.container {
         padding: .5rem;
     }
 
+    #main th.education {
+        width: 50%;
+    }
+
+    #main th.institution {
+        width: 25%;
+    }
+
+    #main th.graduation {
+        width: 25%;
+    }
+
     #main th.position {
         width: 25%;
     }
@@ -196,7 +233,7 @@ main.container {
 
     #main th.start,
     #main th.end {
-        width: 22.5%;
+        width: 20%;
     }
 
     #main th:nth-child(3),
@@ -223,25 +260,42 @@ main.container {
         list-style: circle outside;
     }
 
-    /* #main .table-container {
-        padding: .5rem;
-    } */
-
     .skills-grid {
-        display: grid;
-        grid-template: 1fr 1fr 1fr / 1fr 1fr;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 1rem;
+        justify-content: start;
+
+        position: relative;
+        font-size: .75rem;
+        font-weight: 300;
+        max-height: 60vh;
+    }
+
+    .skills-grid h6 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding-bottom: .5rem;
+    }
+
+    .skills-grid ul {
+        padding-left: 0;
     }
 
     /** SIDE BAR **/
     #quick-links {
         display: flex;
         flex-flow: column nowrap;
-        flex-basis: 40rem;
+        flex-basis: 25rem;
 
+        position: sticky;
         font-weight: 300;
         letter-spacing: .2rem;
+        padding-left: 0;
         padding-right: 0;
+        max-height: 50vh;
         text-align: right;
+        top: 9rem;
     }
 
     #quick-links a:hover {
@@ -263,13 +317,63 @@ main.container {
         border-right: 1px solid #2E3192;
         padding-right: 1rem;
     }
-    
+
 
 
 /***** FOOTER *****/
 #footer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    color: #F4F7F8;
+    font-size: .75rem;
+    font-weight: 100;
+    
     position: relative;
     height: 30vh;
+}
+
+#footer .social-media {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    align-items: end;
+}
+
+#footer a {
+    color: #F4F7F8;
+}
+
+#footer .logo {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: end;
+    justify-content: center;
+    gap: .25rem;
+}
+
+#footer .logo-img {
+    height: 1.5rem;
+}
+
+#footer .logo-title {
+    display: flex;
+    flex-flow: column nowrap;
+
+    font-size: .8rem;
+    font-weight: 300;
+    line-height: .8;
+}
+
+#footer p {
+    font-size: .6rem;
+    letter-spacing: .1rem;
+    line-height: 1.5;
+    text-align: center;
+    text-indent: 0;
 }
 
 

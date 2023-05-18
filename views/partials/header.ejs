@@ -13,11 +13,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/c869287855.js" crossorigin="anonymous"></script>
+
+    <!-- CALENDLY -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">window.onload = function() {
+        Calendly.initBadgeWidget({
+            url: 'https://calendly.com/lee-santos/connect',
+            text: 'Contact me',
+            color: '#2E3192',
+            textColor: '#F4F7F8',
+            branding: false }); }</script>
+
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="css/styles.css">
 
+    <!-- FAVICON & TITLE -->
     <link rel="icon" type="image/x-icon" href="images/favicon.svg">
-    <title>Lee Santos .</title>
+    <title>Lee Santos</title>
     
 </head>
 <body>
+
+    <header>
+        <section id="banner-wrapper">
+            <div id="banner" class="container">
+                <div id="logo"><img src="images/logo-expanded.svg" alt="lee santos logo" /></div>
+                <div id="accessibility-wrapper">
+                    <div class="accessibility-items placeholder-wave no-select" aria-hidden="true">
+                        <span class="placeholder"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="bottom"
+                            data-bs-title="Theme toggle coming soon.">Theme btn.</span>
+                        <span class="placeholder"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="bottom"
+                            data-bs-title="Search function coming soon.">This is a placeholder.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="breadcrumb-wrapper">
+            <nav class="container" aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Resume</li>
+                </ul>
+            </nav>
+        </section>
+
+        <div id="banner-divider" class="gradient-background"></div>
+    </header>
