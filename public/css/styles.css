@@ -11,7 +11,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
     line-height: 3;
-    scroll-margin-top: 8rem;
 }
 
 a {
@@ -210,6 +209,7 @@ main.container {
     .article-container {
         position: relative;
         margin-bottom: 3rem;
+        scroll-margin-top: 8rem;
     }
 
     #main table, #main p {
@@ -456,7 +456,7 @@ main.container {
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {    
     #breadcrumb-wrapper .breadcrumb-items {
         display: none;
     }
@@ -498,6 +498,10 @@ main.container {
 @media only screen and (max-width: 576px) {
     .container {
         padding: 3rem 0;
+    }
+
+    .article-container {
+        scroll-margin-top: 10rem;
     }
 
     #banner {
