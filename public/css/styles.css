@@ -173,6 +173,22 @@ main.container {
         font-size: .75rem;
     }
 
+    #navbar .quick-links {
+        display: none;
+        padding-top: 0;
+        position: relative;
+        text-align: left;
+        top: 0;
+    }
+
+    #navbar .quick-links td {
+        font-size: .75rem;
+        border-left: 1px solid #2E3192;
+        border-right: none;
+        padding-left: 1rem;
+        padding-right: 0;
+    }
+
     .navbar-spacer {
         height: 3rem;
     }
@@ -282,8 +298,8 @@ main.container {
         padding-left: 0;
     }
 
-    /** SIDE BAR **/
-    #quick-links {
+    /*** ASIDE ***/
+    .quick-links {
         display: flex;
         flex-flow: column nowrap;
         flex-basis: 25rem;
@@ -298,21 +314,21 @@ main.container {
         top: 9rem;
     }
 
-    #quick-links a:hover {
+    .quick-links a:hover {
         color: #ED1C24;
     }
 
-    #quick-links td {
+    .quick-links td {
         padding: .5rem 0;
     }
 
-    #quick-links th {
+    .quick-links th {
         font-size: 1.2rem;
         padding-bottom: 1rem;
         vertical-align: middle;
     }
 
-    #quick-links td {
+    .quick-links td {
         font-size: .75rem;
         border-right: 1px solid #2E3192;
         padding-right: 1rem;
@@ -404,3 +420,80 @@ main.container {
       background-position: 0% 50%;
     }
   }
+
+
+
+/***** BREAKPOINTS *****/
+
+@media only screen and (max-width: 1200px) {
+    aside.quick-links {
+        display: none;
+    }
+
+    #navbar .quick-links {
+        display: flex;
+    }
+
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #main {
+        margin-right: 0;
+    }
+
+    .skills-grid {
+        max-height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #breadcrumb-wrapper {
+        display: none;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    #main {
+            margin-left: 0;
+        }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        padding: 3rem 0;
+    }
+
+    #banner {
+        justify-content: center;
+    }
+
+    .accessibility-items {
+        display: none;
+    }
+
+    .calendly-badge-widget {
+        margin-right: -59px !important;
+        right: 50% !important;
+    }
+
+    #footer {
+        height: 40vh;
+        padding-bottom: 3rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    main.container {
+        padding: 0 2rem;
+    }
+
+    .skills-grid {
+        max-height: 100vh;
+    }
+}
