@@ -355,7 +355,8 @@ main.container {
     font-weight: 100;
     
     position: relative;
-    height: 30vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 #footer .social-media {
@@ -522,10 +523,9 @@ main.container {
         right: 50% !important;
     }
 
-    #footer {
+    /* #footer {
         height: 40vh;
-        padding-bottom: 3rem;
-    }
+    } */
 }
 
 @media only screen and (max-width: 420px) {
