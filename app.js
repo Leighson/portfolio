@@ -1,20 +1,29 @@
 /***** MODULES *****/
 
-
-/* EXPRESS with BODY-PARSER */
+/* SET EXPRESS & OPTIONS */
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-/* MONGOOSE CLIENT */
-require("dotenv");
+/* OTHER MODULES */
+require("dotenv").config();
+const _ = require("lodash");
 const mongoose = require("mongoose");
-URI = "mongodb+srv://origin.howe4yr.mongodb.net/";
-SERVER_USERID = process.env.ORIGIN_USERID;
-SERVER_KEY = process.env.ORIGIN_KEY;
-DATABASE = "portfolio";
+
+/* SET RENDER ENGINE */
+require("ejs");
+app.set('view engine', 'ejs');
+
+
+/***** DATABASE *****/
+
+/* MONGO CLIENT */
+const URI = "mongodb+srv://origin.howe4yr.mongodb.net/";
+const SERVER_USERID = process.env.ORIGIN_USERID;
+const SERVER_KEY = process.env.ORIGIN_KEY;
+const DATABASE = "portfolio";
 
 async function mongoConnect() {
     try {
@@ -30,10 +39,18 @@ async function mongoConnect() {
     }
 };
 
+/* OBJECT DATA MODEL */
+const PostsSchema = {
+    title: String,
+    author: String,
+    content: String,
+    date: { type: Date, default: Date.now },
+};
+
+const Post = mongoose.model("Post", PostsSchema);
 
 
-/***** WEBPAGES *****/
-
+/***** PAGES *****/
 
 /* REDIRECT HOME to RESUME */
 app.get('/', (req, res) => {
@@ -51,17 +68,35 @@ app.get('/portfolio', (req, res) => {
 });
 
 /* BLOG */
-app.get('/blog', (req, res) => {
+app.get('/blog', async (req, res) => {
     mongoConnect();
-    res.render('placeholder.ejs');
+
+    let posts = await Post.find();
+
+    console.log(posts);
+
+    if (posts == "" || posts == null) {
+        posts = [{
+            title: "Hello",
+            content: "World"
+        }];
+    }
+
+    res.render('blog.ejs', {
+        posts: posts
+    });
 });
 
-/* DYNAMIC PORT for RAILWAY */
+
+
+/***** PORTS *****/
+
+/* RAILWAY ACCOMMODATION */
 let PORT = process.env.PORT;
 if (PORT == null || PORT === "") {
   PORT = 3000;
 }
-
+/* DEPLOYMENT */
 app.listen(PORT, function() {
   console.log(`Server started on port ${PORT}`);
 });
