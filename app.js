@@ -1,9 +1,9 @@
+require("dotenv");
 const ejs = require('ejs');
-const express = require('express');
 const bodyParser = require('body-parser');
-const PORT = 3000;
-const app = express();
 
+const express = require('express');
+const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -23,7 +23,12 @@ app.get('/blog', (req, res) => {
     res.render('placeholder.ejs');
 });
 
+/* DYNAMIC PORT for RAILWAY */
+let PORT = process.env.PORT;
+if (PORT == null || PORT === "") {
+  PORT = 3000;
+}
 
-app.listen(PORT, () => {
-    console.log(`Server started on Port ${PORT}...`);
+app.listen(PORT, function() {
+  console.log(`Server started on port ${PORT}`);
 });
