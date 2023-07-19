@@ -1,21 +1,20 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Portfolio website.",
+  "description": "Developer portfolio website.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "Lee Santos",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "dotenv": "^16.1.4",
-    "ejs": "^3.1.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "lodash": "^4.17.21",
-    "mongoose": "^7.2.2",
-    "nodemon": "^2.0.22",
-    "normalize.css": "^8.0.1"
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.4.0",
+    "nodemon": "^3.0.1"
   }
 }
