@@ -4,9 +4,11 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
+        "noreferrer",
         "Stateland",
         "Udemy",
-        "USERID"
+        "USERID",
+        "Vite"
     ],
     "ignoreWords": [],
     "import": []

@@ -1,15 +1,23 @@
 import express from "express";
 import cors from "cors";
-import "./loadEnvironment.mjs";
-import blog from "./routes/blog.mjs"
+import bodyParser from "body-parser";
 
-const PORT = process.env.PORT || 0;
+// Import environment variables with middleware
+import dotenv from "dotenv";
+dotenv.config();
+
+// Create an Express.js instance
 const app = express();
 
+// Middleware
 app.use(cors());
+app.use(express.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.use("/blog", blog);
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port: ${PORT}`);
+// Define a simple route
+app.get('/api', (req, res) => {
+    res.json({ users: ['Welcome to our API', 'hello', 'mark'] });
 });
+
+const port = 3000;
+app.listen(port, () => console.log(`Server is running on port ${port}`));
