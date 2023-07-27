@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-// import reactLogo from "/react.svg";
-// import viteLogo from "/favicon.svg";
+import Logo from "./Logo";
 import "../App.css";
 
 function App() {
@@ -32,14 +31,12 @@ function App() {
       <header>
         <section id="banner-wrapper">
           <div id="banner" className="container">
-            <div id="logo">
-              <a href="https://aboutlee.xyz">
-                <img
-                  src="/logo-expanded.svg"
-                  alt="Expanded 'Lee Santos' logo."
-                />
-              </a>
-            </div>
+            <Logo
+              id="logo"
+              url="https://aboutlee.xyz"
+              src="/logo-expanded.svg"
+              alt="Expanded 'Lee Santos' logo."
+            />
             <div id="accessibility-wrapper">
               <div
                 className="accessibility-items placeholder-wave no-select"
